@@ -1,0 +1,173 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+/*layout principal*/
+
+body {
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#area-logo {
+
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 5px;
+	margin-left: 200px;
+	margin-top: 43px;	
+
+
+}   
+
+#area-nome {
+
+	float: left;
+	margin-top: 66px;
+	margin-right: 180px;
+	color: #4b8aa3;
+}   
+
+#area-menu {
+
+	float: left;
+	margin-top: 68px;
+}
+
+.principal {
+
+	
+	clear: both;
+	width: 380px;
+	height: 335px;
+	margin-top: 100px;
+	margin-left: 200px;
+	float: left;
+
+	}
+
+.principal1 {
+
+	
+
+	width: 500px;
+	height: 400px;
+	margin-top: 50px;
+
+	float: left;
+
+
+	}
+
+
+
+
+
+/*Formatação*/
+
+a {
+	text-decoration: none;
+	margin-right: 50px;
+	color: #4b8aa3;
+}
+
+a:link, a:viisted {
+	text-decoration: none;
+	margin-right: 30px;
+	color: #4b8aa3;
+}
+
+
+
+a:hover {
+	color:  #e34461;
+	
+
+}
+
+a:active {
+
+	color: black;
+}
+
+h1{
+
+	color:  #e34461;
+	margin-bottom: 10px;
+	font-size: 50px;
+}
+
+h3 {
+
+	color: #4b8aa3;
+	margin-bottom: 5px;
+
+}
+
+.principal a {
+
+	background: #c81e3d;
+	 padding: 15px;
+	  width: 162px;
+	   font-size: 15px;
+	    color: #FFF;"
+}
+
+.principal a:hover {
+
+	color:  #4b8aa3;
+}
+
+#insta {
+	
+     float: left;
+
+    
+}
+
+
+#linkedin {
+	
+    float: left;
+	margin-right: 5px;
+
+}
+
+#github {
+	 float: left;
+      clear: both;
+       height: 50px;
+        margin-left: 200px;
+margin-right: 5px;
+}
+
+
+#hover:hover {
+
+	width: 30px;
+}
+
+.icone {
+  
+  transition: transform 0.2s;  /*transform é a propriedade, 0.2 é op tempo que leva para a transição*/ 
+  cursor: pointer;       /*muda o cursor para a mãozinha*/
+}
+
+.icone:hover {
+  transform: scale(1.5); /* Aumenta 50% ao passar o mouse */
+}
+
+.saiba {
+  
+  transition: transform 0.2s;  /*transform é a propriedade, 0.2 é op tempo que leva para a transição*/ 
+  cursor: pointer;       /*muda o cursor para a mãozinha*/
+  display: inline-block;
+}
+
+.saiba:hover {
+  transform: scale(1.2); /* Aumenta 50% ao passar o mouse */
+}
