@@ -1,78 +1,111 @@
 * {
+	box-sizing: border-box;
 	margin: 0px;
-	padding: 0px;
-	
+	padding: 0px;	
 }
 
 /*layout principal*/
 
 body {
-	font-size: 1em;
-	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: var(--tamanho-base-fonte);
+	font-family: var(--fonte-padrao);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	min-height: 100vh;
+	position: relative;
+	background-image: url(../Portifolio/imagens/leozin.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 17%;
+	
 }
 
+/*#container-principal {
 
-#area-logo {
+	
 
-	width: 60px;
-	height: 60px;
-	float: left;
-	margin-right: 5px;
-	margin-left: 200px;
-	margin-top: 43px;	
+}*/
 
+#logo-nome-barra {
 
-}   
+	
+	display: flex;
+	width: 100%;
+	
+    margin-top: 2vh;
+	align-items: center;
+	
+	
+}
 
-#area-nome {
+#logo{
 
-	float: left;
-	margin-top: 66px;
-	margin-right: 180px;
+	margin-left: 2vw;
+
+}
+
+#nome {
+
+	margin-left: 0.5vw;
 	color: #4b8aa3;
-}   
+	
 
-#area-menu {
-
-	float: left;
-	margin-top: 68px;
 }
 
-.principal {
+#barra-navegacao {
 
 	
-	clear: both;
-	width: 380px;
-	height: 335px;
-	margin-top: 100px;
-	margin-left: 200px;
-	float: left;
+	margin-left: auto;
+	margin-right: 2vw;
 
-	}
+}
 
-.principal1 {
+.espaco-opcoes {
 
+	margin-right: 2vw;
+
+}
+
+
+#rede-social-direitos {
+	display: flex;
+	margin-left: 2vw;
+	margin-bottom: 3vh;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	align-items: center;
+}
+
+#direitos-reservados {
+
+	margin-left: 1vw;
+	opacity: 0.4;
 	
-
-	width: 500px;
-	height: 400px;
-	margin-top: 50px;
-
-	float: left;
-
-
-	}
-
-
-
+}
 
 
 /*Formatação*/
 
-a {
-	text-decoration: none;
-	margin-right: 50px;
-	color: #4b8aa3;
+:root {
+
+	--cor-primaria: ;
+    --cor-secundaria: ;
+    --cor-fundo: ;
+    
+
+    --tamanho-base-fonte: 1rem; 
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+	--cor-fonte-azul:  #4b8aa3;
+
+}
+
+.link-barra a {
+
+    text-decoration: none;
+	color: var(--cor-fonte-azul);
+	font-size: 1.1rem;
 }
 
 a:link, a:viisted {
@@ -94,62 +127,6 @@ a:active {
 	color: black;
 }
 
-h1{
-
-	color:  #e34461;
-	margin-bottom: 10px;
-	font-size: 50px;
-}
-
-h3 {
-
-	color: #4b8aa3;
-	margin-bottom: 5px;
-
-}
-
-.principal a {
-
-	background: #c81e3d;
-	 padding: 15px;
-	  width: 162px;
-	   font-size: 15px;
-	    color: #FFF;"
-}
-
-.principal a:hover {
-
-	color:  #4b8aa3;
-}
-
-#insta {
-	
-     float: left;
-
-    
-}
-
-
-#linkedin {
-	
-    float: left;
-	margin-right: 5px;
-
-}
-
-#github {
-	 float: left;
-      clear: both;
-       height: 50px;
-        margin-left: 200px;
-margin-right: 5px;
-}
-
-
-#hover:hover {
-
-	width: 30px;
-}
 
 .icone {
   
@@ -161,13 +138,3 @@ margin-right: 5px;
   transform: scale(1.5); /* Aumenta 50% ao passar o mouse */
 }
 
-.saiba {
-  
-  transition: transform 0.2s;  /*transform é a propriedade, 0.2 é op tempo que leva para a transição*/ 
-  cursor: pointer;       /*muda o cursor para a mãozinha*/
-  display: inline-block;
-}
-
-.saiba:hover {
-  transform: scale(1.2); /* Aumenta 50% ao passar o mouse */
-}
