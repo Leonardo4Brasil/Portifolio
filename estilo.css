@@ -11,13 +11,14 @@ body {
 	font-size: var(--tamanho-base-fonte);
 	font-family: var(--fonte-padrao);
 	overflow-x: hidden;
-	overflow-y: hidden;
 	min-height: 100vh;
 	position: relative;
 	background-image: url(../Portifolio/imagens/leozin.jpeg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 17%;
+	display: flex;
+	flex-direction: column;
 	
 }
 
@@ -72,12 +73,8 @@ body {
 #rede-social-direitos {
 	display: flex;
 	margin-left: 2vw;
-	margin-bottom: 3vh;
-	position: absolute;
-	bottom: 0;
-	left: 0;
 	align-items: center;
-	padding-bottom: env(safe-area-inset-bottom);
+	padding-bottom: calc(env(safe-area-inset-bottom) + 3vh);
 }
 
 #direitos-reservados {
@@ -85,6 +82,10 @@ body {
 	margin-left: 1vw;
 	opacity: 0.4;
 	
+}
+
+#conteudo-principal {
+    flex-grow: 1; /* Ocupa todo o espaço vertical disponível */
 }
 
 
