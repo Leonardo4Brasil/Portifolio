@@ -1,92 +1,397 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="pt-BR">
 <head>
-
-	<title> Home- Meu portifólio  </title>
-	 <meta charset="utf-8">
-	  <link rel="stylesheet" type="text/css" href="estilo.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Leonardo Gabriel - Desenvolvedor Front-end">
+  <title>Leonardo Gabriel | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-	<div id="topo"></div>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header" role="banner">
+    <div class="container header__container">
+      <div class="header__brand" aria-label="Leonardo Gabriel - Início">
+        <img src="imagens/logoprincipal.png" alt="" class="header__logo" width="60" height="60">
+        <span class="header__name">Leonardo Gabriel</span>
+      </div>
 
-			<div id="area-logo">
+      <nav class="header__nav" aria-label="Navegação principal">
+        <ul class="header__menu" role="list">
+          <li><a href="#home" class="header__link">Home</a></li>
+          <li><a href="#sobre" class="header__link">Sobre</a></li>
+          <li><a href="#portfolio" class="header__link">Portfólio</a></li>
+          <li><a href="#servicos" class="header__link">Serviços</a></li>
+          <li><a href="#resumo" class="header__link">Resumo</a></li>
+          <li><a href="#contato" class="header__link">Contato</a></li>
+        </ul>
+      </nav>
 
-				<img src="imagens//logoprincipal.png">
+      <!-- Mobile menu button -->
+      <button class="header__toggle" aria-expanded="false" aria-controls="header-menu" aria-label="Abrir menu">
+        <span class="header__toggle-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
 
-			</div>
+  <!-- MAIN CONTENT -->
+  <main id="main-content" role="main">
+    <!-- HERO SECTION -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__greeting">Olá, sou</p>
+          <h1 id="hero-title" class="hero__title">Desenvolvedor<br><span class="hero__highlight">Front-end</span></h1>
+          <p class="hero__description">Crio interfaces modernas, acessíveis e performáticas com HTML, CSS e JavaScript. Transformo designs em experiências web incríveis.</p>
+          <div class="hero__actions">
+            <a href="#sobre" class="btn btn--primary">Saiba mais sobre mim</a>
+            <a href="#portfolio" class="btn btn--secondary">Ver meus projetos</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <img src="imagens/principal.jpg" alt="" class="hero__image" width="500" height="400">
+        </div>
+      </div>
+    </section>
 
-			<div id="area-nome">
+    <!-- ABOUT SECTION -->
+    <section id="sobre" class="section section--about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="about-title" class="section__title">Sobre mim</h2>
+          <p class="section__subtitle">Conheça minha jornada e habilidades</p>
+        </header>
 
-				<h3>Leonardo Gabriel</h3>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>Sou um desenvolvedor Front-end apaixonado por criar interfaces elegantes e funcionais. Minha jornada começou com curiosidade sobre como a web funciona e evoluiu para uma carreira focada em experiência do usuário, performance e acessibilidade.</p>
+            <p>Atualmente, me especializo em <strong>React</strong>, <strong>TypeScript</strong> e ecossistema moderno de ferramentas (Vite, Tailwind, Testing Library). Acredito que código limpo, bem testado e documentado é a base de produtos duradouros.</p>
+          </div>
 
-			</div>
+          <div class="about__skills" aria-label="Habilidades técnicas">
+            <h3 class="about__skills-title">Tecnologias que domino</h3>
+            <ul class="about__skills-list" role="list">
+              <li class="about__skill"><span class="about__skill-icon" aria-hidden="true">🌐</span> HTML5 Semântico & CSS3 Moderno</li>
+              <li class="about__skill"><span class="about__skill-icon" aria-hidden="true">⚛️</span> React & Next.js</li>
+              <li class="about__skill"><span class="about__skill-icon" aria-hidden="true">📘</span> TypeScript & JavaScript ES6+</li>
+              <li class="about__skill"><span class="about__skill-icon" aria-hidden="true">🎨</span> Tailwind CSS & Styled Components</li>
+              <li class="about__skill"><span class="about__skill-icon" aria-hidden="true">🧪</span> Jest, React Testing Library, Cypress</li>
+              <li class="about__skill"><span class="about__skill-icon" aria-hidden="true">⚡</span> Vite, Webpack, Git & CI/CD</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="section section--portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="portfolio-title" class="section__title">Projetos em destaque</h2>
+          <p class="section__subtitle">Alguns trabalhos recentes</p>
+        </header>
 
-			<div id="area-menu">
+        <div class="portfolio__grid" role="list">
+          <!-- Project Card 1 -->
+          <article class="portfolio__card" role="listitem">
+            <div class="portfolio__image">
+              <img src="imagens/projeto1.jpg" alt="Preview do projeto E-commerce" loading="lazy" width="400" height="250">
+            </div>
+            <div class="portfolio__content">
+              <span class="portfolio__tag">React + TypeScript</span>
+              <h3 class="portfolio__title">E-commerce Completo</h3>
+              <p class="portfolio__description">Plataforma de vendas com carrinho, checkout, painel admin e integração com Stripe.</p>
+              <div class="portfolio__links">
+                <a href="#" class="portfolio__link" aria-label="Ver demo do E-commerce">Demo</a>
+                <a href="#" class="portfolio__link" aria-label="Ver código no GitHub">Código</a>
+              </div>
+            </div>
+          </article>
 
-			     <a href="">Home</a>
-			     <a href="">Sobre</a>
-			     <a href="">Portifólio</a>
-			     <a href="">Serviço</a>
-			     <a href="">Resumo</a>
-			     <a href="">Contato</a>
+          <!-- Project Card 2 -->
+          <article class="portfolio__card" role="listitem">
+            <div class="portfolio__image">
+              <img src="imagens/projeto2.jpg" alt="Preview do projeto Dashboard" loading="lazy" width="400" height="250">
+            </div>
+            <div class="portfolio__content">
+              <span class="portfolio__tag">Next.js + Tailwind</span>
+              <h3 class="portfolio__title">Dashboard Analytics</h3>
+              <p class="portfolio__description">Painel administrativo com gráficos em tempo real, relatórios exportáveis e tema dark/light.</p>
+              <div class="portfolio__links">
+                <a href="#" class="portfolio__link" aria-label="Ver demo do Dashboard">Demo</a>
+                <a href="#" class="portfolio__link" aria-label="Ver código no GitHub">Código</a>
+              </div>
+            </div>
+          </article>
 
-			</div>
+          <!-- Project Card 3 -->
+          <article class="portfolio__card" role="listitem">
+            <div class="portfolio__image">
+              <img src="imagens/projeto3.jpg" alt="Preview do projeto Blog" loading="lazy" width="400" height="250">
+            </div>
+            <div class="portfolio__content">
+              <span class="portfolio__tag">Astro + MDX</span>
+              <h3 class="portfolio__title">Blog Técnico Pessoal</h3>
+              <p class="portfolio__description">Blog otimizado para SEO, com sintaxe highlighting, RSS e deploy automático na Vercel.</p>
+              <div class="portfolio__links">
+                <a href="#" class="portfolio__link" aria-label="Ver demo do Blog">Demo</a>
+                <a href="#" class="portfolio__link" aria-label="Ver código no GitHub">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-			<div class="principal" >
+    <!-- SERVICES SECTION -->
+    <section id="servicos" class="section section--services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="services-title" class="section__title">Serviços</h2>
+          <p class="section__subtitle">Como posso ajudar seu projeto</p>
+        </header>
 
-				<h3>Olá pessoas,</h3>
+        <div class="services__grid" role="list">
+          <article class="service-card" role="listitem">
+            <div class="service-card__icon" aria-hidden="true">🌐</div>
+            <h3 class="service-card__title">Desenvolvimento Web</h3>
+            <p class="service-card__description">Sites e aplicações responsivas, performáticas e acessíveis do zero.</p>
+          </article>
 
-				<h1>Eu sou um <br> programador</h1>
+          <article class="service-card" role="listitem">
+            <div class="service-card__icon" aria-hidden="true">⚛️</div>
+            <h3 class="service-card__title">React & Next.js</h3>
+            <p class="service-card__description">SPAs, SSR, SSG e aplicações full-stack com ecossistema moderno.</p>
+          </article>
 
-				<h3>seja bem-vindo ao meu portifólio web site</h3>
-				<br><br><br><br>
-				<a class="saiba" href="">Saiba mais sobre mim</a>
+          <article class="service-card" role="listitem">
+            <div class="service-card__icon" aria-hidden="true">🎨</div>
+            <h3 class="service-card__title">UI/UX & Design System</h3>
+            <p class="service-card__description">Componentes reutilizáveis, tokens de design e consistência visual.</p>
+          </article>
 
-			</div>
+          <article class="service-card" role="listitem">
+            <div class="service-card__icon" aria-hidden="true">⚡</div>
+            <h3 class="service-card__title">Performance & SEO</h3>
+            <p class="service-card__description">Otimização Core Web Vitals, Lighthouse 90+ e SEO técnico.</p>
+          </article>
 
-			<div class="principal1">
+          <article class="service-card" role="listitem">
+            <div class="service-card__icon" aria-hidden="true">🧪</div>
+            <h3 class="service-card__title">Testes & Qualidade</h3>
+            <p class="service-card__description">Testes unitários, integração, E2E e pipelines de CI/CD.</p>
+          </article>
 
-				<img width="650px" src="imagens/principal.jpg">
+          <article class="service-card" role="listitem">
+            <div class="service-card__icon" aria-hidden="true">🔧</div>
+            <h3 class="service-card__title">Manutenção & Refatoração</h3>
+            <p class="service-card__description">Modernização de legados, correção de bugs e debt técnico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-			</div>
+    <!-- RESUME SECTION -->
+    <section id="resumo" class="section section--resume" aria-labelledby="resume-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="resume-title" class="section__title">Resumo Profissional</h2>
+          <p class="section__subtitle">Experiência e formação</p>
+        </header>
 
-			<div class="redes-socias">
-				
-				<div id="github" class="icone">
-					
-					<img src="imagens/git.png">
+        <div class="resume__grid">
+          <div class="resume__column">
+            <h3 class="resume__section-title">Experiência</h3>
+            <ul class="resume__list" role="list">
+              <li class="resume__item">
+                <time class="resume__date" datetime="2023-01">Jan 2023 - Atual</time>
+                <div class="resume__item-content">
+                  <h4 class="resume__role">Desenvolvedor Front-end Sênior</h4>
+                  <p class="resume__company">TechCorp Solutions</p>
+                  <p class="resume__details">Liderança técnica de squad, arquitetura de microfrontends, mentoria de devs júnior.</p>
+                </div>
+              </li>
+              <li class="resume__item">
+                <time class="resume__date" datetime="2021-03">Mar 2021 - Dez 2022</time>
+                <div class="resume__item-content">
+                  <h4 class="resume__role">Desenvolvedor Front-end Pleno</h4>
+                  <p class="resume__company">StartupXYZ</p>
+                  <p class="resume__details">Migração de legado para React, implementação de Design System, CI/CD.</p>
+                </div>
+              </li>
+              <li class="resume__item">
+                <time class="resume__date" datetime="2019-06">Jun 2019 - Fev 2021</time>
+                <div class="resume__item-content">
+                  <h4 class="resume__role">Desenvolvedor Front-end Júnior</h4>
+                  <p class="resume__company">Agência Digital Creative</p>
+                  <p class="resume__details">Sites institucionais, landing pages, e-commerces WordPress + WooCommerce.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-				</div>
+          <div class="resume__column">
+            <h3 class="resume__section-title">Formação & Certificações</h3>
+            <ul class="resume__list" role="list">
+              <li class="resume__item">
+                <time class="resume__date" datetime="2024">2024</time>
+                <div class="resume__item-content">
+                  <h4 class="resume__role">AWS Certified Cloud Practitioner</h4>
+                  <p class="resume__company">Amazon Web Services</p>
+                </div>
+              </li>
+              <li class="resume__item">
+                <time class="resume__date" datetime="2023">2023</time>
+                <div class="resume__item-content">
+                  <h4 class="resume__role">React Advanced Patterns</h4>
+                  <p class="resume__company">Kent C. Dodds / Epic React</p>
+                </div>
+              </li>
+              <li class="resume__item">
+                <time class="resume__date" datetime="2019">2019</time>
+                <div class="resume__item-content">
+                  <h4 class="resume__role">Bacharelado em Ciência da Computação</h4>
+                  <p class="resume__company">Universidade Federal (UFXX)</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-				<div id="linkedin" class="icone">
-					
-					<img src="imagens/link.png">
+        <div class="resume__download">
+          <a href="curriculo.pdf" class="btn btn--outline" download>Baixar Currículo Completo (PDF)</a>
+        </div>
+      </div>
+    </section>
 
-				</div>
+    <!-- CONTACT SECTION -->
+    <section id="contato" class="section section--contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="contact-title" class="section__title">Vamos conversar?</h2>
+          <p class="section__subtitle">Estou disponível para novos projetos e oportunidades</p>
+        </header>
 
-				<div id="insta" class="icone">
-					
-					<img src="imagens/insta.png">
+        <div class="contact__grid">
+          <div class="contact__info">
+            <h3 class="contact__title">Entre em contato</h3>
+            <p class="contact__description">Seja para uma proposta, dúvida técnica ou só para trocar uma ideia sobre tecnologia, fico à vontade.</p>
 
-				</div>
+            <ul class="contact__methods" role="list">
+              <li class="contact__method">
+                <span class="contact__method-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:leonardo@email.com" class="contact__method-link">leonardo@email.com</a>
+                </div>
+              </li>
+              <li class="contact__method">
+                <span class="contact__method-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Localização</strong>
+                  <span class="contact__method-text">São Paulo, SP - Brasil</span>
+                </div>
+              </li>
+              <li class="contact__method">
+                <span class="contact__method-icon" aria-hidden="true">⏰</span>
+                <div>
+                  <strong>Disponibilidade</strong>
+                  <span class="contact__method-text">Seg-Sex, 9h-18h (BRT)</span>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-			</div>
+          <form class="contact__form" action="https://formspree.io/f/seu-id" method="POST" aria-label="Formulário de contato">
+            <div class="form__group">
+              <label for="nome" class="form__label">Nome completo</label>
+              <input type="text" id="nome" name="nome" class="form__input" required autocomplete="name">
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" name="email" class="form__input" required autocomplete="email">
+            </div>
+            <div class="form__group">
+              <label for="assunto" class="form__label">Assunto</label>
+              <input type="text" id="assunto" name="assunto" class="form__input" required>
+            </div>
+            <div class="form__group">
+              <label for="mensagem" class="form__label">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="form__textarea" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Enviar mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <span class="footer__name">Leonardo Gabriel</span>
+        <p class="footer__tagline">Desenvolvedor Front-end</p>
+      </div>
 
-		
-		
-	
+      <nav class="footer__social" aria-label="Redes sociais">
+        <ul class="footer__social-list" role="list">
+          <li>
+            <a href="https://github.com/seuusuario" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg class="footer__social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/seuusuario" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg class="footer__social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/seuusuario" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg class="footer__social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-.128-.288-.537-1.397-.073-4.947zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
+      <p class="footer__copyright">© 2025 Leonardo Gabriel. Feito com <span aria-label="amor">❤️</span> e boas práticas.</p>
+    </div>
+  </footer>
 
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.header__toggle');
+    const menu = document.querySelector('.header__menu');
+    toggle?.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu?.classList.toggle('header__menu--open');
+    });
 
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.header__link').forEach(link => {
+      link.addEventListener('click', () => {
+        menu?.classList.remove('header__menu--open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
 
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>
